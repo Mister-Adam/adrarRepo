@@ -1,0 +1,36 @@
+h1{
+color: red;
+text-align: center;
+font-size:xx-large;
+}
+
+h3{
+color: blue;
+font-size: x-large;
+}
+
+article:not(:last-of-type) p{
+background-color: grey;
+}
+
+strong{
+font-weight: normal;
+color: yellowgreen;
+}
+
+em{
+font-style: normal;  
+font-size: larger;
+text-decoration-line: underline;
+color: orange;
+}
+
+article:last-of-type p{
+background-color: pink;
+}
+
+article:nth-child(2n+1) h3{
+color: green;
+text-align: right;
+text-decoration-line: underline;
+}
