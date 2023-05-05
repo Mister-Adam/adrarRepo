@@ -1,0 +1,18 @@
+div,p{
+width: 200px;
+height: 200px;
+border: 2px solid black;
+margin-bottom: 20px;
+}
+
+div:first-of-type{
+    background: linear-gradient(to bottom left, red, green,blue);
+}
+
+div:last-of-type{
+    background: linear-gradient(-70deg,yellow,purple 25% );
+}
+
+p{
+    background: linear-gradient(to bottom, white, rgb(0,0,0,0.5) ); 
+}
