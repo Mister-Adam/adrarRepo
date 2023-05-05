@@ -10,7 +10,7 @@ p:active{
 background-color: grey;
 }
 
-a{
+a:link{
 color: orange;
 }
 
