@@ -5,14 +5,26 @@ border: 2px solid black;
 margin-bottom: 20px;
 }
 
-div:first-of-type{
+div:nth-child(1){
     background: linear-gradient(to bottom left, red, green,blue);
 }
 
-div:last-of-type{
+div:nth-child(2){
     background: linear-gradient(-70deg,yellow,purple 25% );
 }
 
 p{
     background: linear-gradient(to bottom, white, rgb(0,0,0,0.5) ); 
+}
+
+div:nth-child(4){
+    background:radial-gradient(lightblue, pink);
+}
+
+div:nth-child(5){
+    background:repeating-radial-gradient(black, white 10px);
+}
+
+div:nth-child(5):hover{
+    background:repeating-radial-gradient(white, black 10px);
 }
