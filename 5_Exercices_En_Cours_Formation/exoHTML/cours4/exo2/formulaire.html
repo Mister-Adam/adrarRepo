@@ -9,6 +9,8 @@
 </head>
 <body>
     <form action="" method="post">
+        <fieldset>
+            <legend>Infos Personnelles</legend>
         <div>
             <label for="surname">Prénom: </label>
             <input type="text" name="surname"  placeholder="Ex: Jacques" minlength="3" maxlength="20" required>
@@ -33,7 +35,68 @@
         <div>
             <textarea type="text"  rows="10" cols="70"  placeholder="La vie c'est avant tout des rencontres .."></textarea>
         </div>
+        <div>
+            <label for="date">Date de mon commentaire: </label>
+            <input type="date">
+        </div>
+        <div>
+            <label for="pic">Ma photo: </label>
+            <input type="file"  accept="image/png, image/jpg, image/gif">
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Préfèrez-vous</legend>
+        <div>
+            <input type="checkbox" name="html" checked>Le HTML
+        </div>
+        <div>
+            <input type="checkbox" name="css">Le CSS
+        </div>
+        <div>
+            <input type="checkbox" name="js" > Le JavaScript
+        </div>
+        <div>
+            <input type="checkbox" name="doNothing"> Mais rien ne se passe
+        </div>
+    </fieldset>
     </form>
+    <fieldset>
+        <legend>Vous vous levez</legend>
+        <div>
+            <input type="radio" name="radAnswer" checked>Le matin
+        </div>
+        <div>
+            <input type="radio" name="radAnswer">Le midi
+        </div>
+        <div>
+            <input type="radio" name="radAnswer">Le soir
+        </div>
+        <div>
+            <input type="radio"name="radAnswer">Jamais, je suis tétraplégique
+        </div>        
+    </fieldset>
+
+    <fieldset>
+        <legend>Fin de formulaire</legend>
+        <label for="stop">Vous en avez assez?</label>
+        <select name="opt">
+            <optgroup label="Team Pas Encore">
+                <option value="more" selected>J'en veux plus</option>
+                <option value="super">C'est super!</option>
+            </optgroup>
+            <optgroup label="Team Oula">
+                <option value="pissed">J'en ai marre</option>
+                <option value="mercy">Pitié !</option>
+            </optgroup>
+        </select>
+        <div>
+            <input type="button" value="Envoyer">
+            <input type="button" value="Reset">
+        </div>
+        
+        
+    </fieldset>
+
     
 </body>
 </html>
