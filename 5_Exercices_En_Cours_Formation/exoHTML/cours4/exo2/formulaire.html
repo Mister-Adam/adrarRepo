@@ -5,24 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Document</title>
+    <title>FillMe.daddy</title>
 </head>
 <body>
     <form action="" method="post">
         <div>
-            <label for="surname">Prénom :</label>
+            <label for="surname">Prénom: </label>
             <input type="text" name="surname"  placeholder="Ex: Jacques" minlength="3" maxlength="20" required>
         <div>
-            <label for="name">Nom :</label>
-            <input  minlength="2" maxlength="20" placeholder="Ex: Dubois">
+            <label for="name">Nom: </label>
+            <input type="text" minlength="2" maxlength="20" placeholder="Ex: Dubois">
         </div>
         <div>
-            <label for="mail">E-mail</label>
-            <input placeholder="Ex: monMail@FAI.com">
+            <label for="mail">E-mail: </label>
+            <input  type="text" placeholder="Ex: monMail@FAI.com">
         </div>
         <div>
-            <label for="nb">Numéro</label>
-            <input placeholder="Ex: 00.11.22.33.44">
+            <label for="nb">Numéro: </label>
+            <input type="text" placeholder="Ex: 00.11.22.33.44">
+        </div>
+        <div>
+            <label for="age">Age: </label>
+            <input type="number" min="1" max="666" placeholder="Ex: 69">
+        </div>
+        
+            <label for="com">Laissez un commentaire</label>            
+        <div>
+            <textarea type="text"  rows="10" cols="70"  placeholder="La vie c'est avant tout des rencontres .."></textarea>
         </div>
     </form>
     
