@@ -1,0 +1,61 @@
+fieldset
+{
+    width: 400px;
+    height: 250px;
+    background-color: rgb(226, 226, 226);
+    border:1px solid black;
+    
+}
+
+.center{
+
+    text-align: center;
+}
+
+div:nth-last-of-type
+{
+    text-align: center;
+}
+input[type="button"]{
+        
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 5px;
+    border: 3px ridge black;
+    background-color: white;
+
+    
+}
+label{
+    margin-left: 30px;
+}
+
+input[type="button"]:hover{
+background-color: black;
+color: white;
+
+ }
+
+input[type="text"]{
+    
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid black;
+
+}
+
+
+label+input[type="text"]{
+   
+    margin-left: 20px;
+}
+
+input[type="checkbox"]{
+
+    margin-left: 30px;    
+}
+
+input[type="checkbox"]+label{
+
+    margin-left: 10px;
+}
