@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <img src="https://picsum.photos/800/200/?random=1" alt="banner">
+        <h1>Bienvenue sur Immonde.fr !</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./gallery.html">Gallerie</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <form action="./fictive.php" method="post">
+            <fieldset>
+                <legend>Je suis une légende</legend>
+                <div>
+                    <label for="name">Votre Nom:<span style="color: red";>*</span> </label>
+                    <input type="text" minlength="2" maxlength="20" name="name" placeholder="Ex:MERLIN">
+                </div>
+                <div>
+                    <label for="mail">Votre E-Mail:* </label>
+                    <input type="text" name="mail" placeholder="Ex:merlin@wizards.com">
+                </div>
+                <div>
+                    <label for="commentary">Lâche ton com': </label>
+                    <br>
+                    <textarea name="commentary" cols="70" rows="10" placeholder="C'est avant tout des rencontres..."></textarea>
+                </div>
+                <div>
+                    <label for="checkbox"> Envoi en copie?</label>
+                    <input type="checkbox" name="check" checked>
+                </div>
+                <div>
+                    <input type="submit" value="Soumettre">
+                    <input type="reset" value="ReEnsemble">
+                </div>
+            </fieldset>
+        </form>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Special:Random">Fait Divers</a></li>
+            <li><a href="https://steamdb.info/sales/history/">Bientôt les soldes?</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
