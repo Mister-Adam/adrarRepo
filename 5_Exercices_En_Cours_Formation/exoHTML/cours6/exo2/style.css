@@ -15,8 +15,8 @@ header{
 text-align: center;
 }
 header img{
-    height : 10em; 
-
+    height: 80px;
+    object-fit: cover;
 }
 
 footer{
@@ -59,7 +59,7 @@ section div:nth-child(3){
 }
 
 
-@media all and (20em <= width <= 60em) {
+@media screen and (20em <= width <= 45em) {
     section{
         display: flex;
         flex-direction: column;
