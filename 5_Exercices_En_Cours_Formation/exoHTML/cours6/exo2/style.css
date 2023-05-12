@@ -57,3 +57,13 @@ section div:nth-child(3){
     grid-column: 3;
 
 }
+
+
+@media all and (20em <= width <= 60em) {
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+    }
+    
+}
