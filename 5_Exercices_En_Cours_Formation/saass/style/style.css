@@ -1,0 +1,30 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+h1 {
+  color: orange;
+  text-decoration: underline lightblue;
+}
+
+p {
+  color: black;
+}
+
+header {
+  background-color: orange;
+}
+header nav {
+  background-color: black;
+}
+
+/* esperluette gaming -> .class &_sous-élement*/
+.card_title {
+  color: yellow;
+}
+
+/*# sourceMappingURL=style.css.map */
