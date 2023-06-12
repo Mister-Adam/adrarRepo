@@ -1,0 +1,2 @@
+Un club de judo à besoin d'un site internet pour gérer ces adhérents, et leur participation à différentes compétitions. 
+Seul les entraineurs et le responsable du club pourra se connecter sur l'outil.
