@@ -1,0 +1,15 @@
+**Exercice 2 UML use case** (site blog association) :
+Une association à besoin pour communiquer d'un site web de type blog.
+Pour pouvoir poster du contenu (news, articles, événement etc...).
+Elle souhaite que les utilisateurs du blog puissent poster des commentaires et noter  (si ils sont connectés).
+Egalement que les commentaires et le contenu soit modéré et accessible (ajout, modification, suppression) uniquement au rédacteurs de l'association.
+
+
+Liste des acteurs : 
+Visiteur, utilisateur, modérateur, administrateur.
+
+Gestion des articles (ajout, affichage, modification, suppression),
+-Gestion des comptes modérateur (ajout, affichage, modification, suppression),
+-Gestion des comptes utilisateur (inscription, modification, affichage et suppression),
+-Gestion des commentaires (modérer, ajouter, afficher et supprimer)
+-Gestion des notes (ajouter et afficher). 
