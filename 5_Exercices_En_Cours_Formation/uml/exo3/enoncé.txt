@@ -1,0 +1,2 @@
+Réaliser le diagramme d'activité du cas d'utilisation suivant :
+Ajouter un article (modérateur).
