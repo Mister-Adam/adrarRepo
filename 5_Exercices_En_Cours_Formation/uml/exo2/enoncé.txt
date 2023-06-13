@@ -8,7 +8,7 @@ Egalement que les commentaires et le contenu soit modéré et accessible (ajout,
 Liste des acteurs : 
 Visiteur, utilisateur, modérateur, administrateur.
 
-Gestion des articles (ajout, affichage, modification, suppression),
+-Gestion des articles (ajout, affichage, modification, suppression),
 -Gestion des comptes modérateur (ajout, affichage, modification, suppression),
 -Gestion des comptes utilisateur (inscription, modification, affichage et suppression),
 -Gestion des commentaires (modérer, ajouter, afficher et supprimer)
