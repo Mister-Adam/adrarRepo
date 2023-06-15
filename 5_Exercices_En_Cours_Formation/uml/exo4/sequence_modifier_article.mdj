@@ -66,7 +66,7 @@
 									],
 									"font": "Arial;13;0",
 									"width": 1049,
-									"height": 1161,
+									"height": 1225,
 									"nameLabel": {
 										"$ref": "AAAAAAGIuSxtlb9F3fU="
 									},
@@ -534,7 +534,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 72,
-									"top": 992,
+									"top": 928,
 									"width": 449,
 									"height": 105,
 									"text": "(4) Scénario alternatif : les informations sont incorrectes\n4.1 Le si informe l'utilisateur que les données sont incorrectes\n4.2 retour au point 2\n4.3 le visiteur saisi les informations\nDans le scénario nominal on considere que les informations sont correctes"
@@ -547,121 +547,10 @@
 									},
 									"font": "Arial;13;0",
 									"left": 592,
-									"top": 992,
+									"top": 936,
 									"width": 361,
 									"height": 88,
-									"text": "(5) Scénario d'erreur : L'article existe deja \n5.1 Le SI informe le modérateur que l'article existe deja.\nLe scénario s'arrête à ce point"
-								},
-								{
-									"_type": "UMLSeqMessageView",
-									"_id": "AAAAAAGIug0MZ5ZNIb8=",
-									"_parent": {
-										"$ref": "AAAAAAGIuSxtlL9DcAs="
-									},
-									"model": {
-										"$ref": "AAAAAAGIug0MZ5ZMUA4="
-									},
-									"subViews": [
-										{
-											"_type": "EdgeLabelView",
-											"_id": "AAAAAAGIug0MZ5ZOJ4I=",
-											"_parent": {
-												"$ref": "AAAAAAGIug0MZ5ZNIb8="
-											},
-											"model": {
-												"$ref": "AAAAAAGIug0MZ5ZMUA4="
-											},
-											"font": "Arial;13;0",
-											"left": 70,
-											"top": 287,
-											"width": 218.9306640625,
-											"height": 13,
-											"alpha": -1.546849808439254,
-											"distance": 167.0478973228936,
-											"hostEdge": {
-												"$ref": "AAAAAAGIug0MZ5ZNIb8="
-											},
-											"edgePosition": 1,
-											"text": "3 : Saisir informations de modificatiion"
-										},
-										{
-											"_type": "EdgeLabelView",
-											"_id": "AAAAAAGIug0MZ5ZP0qg=",
-											"_parent": {
-												"$ref": "AAAAAAGIug0MZ5ZNIb8="
-											},
-											"model": {
-												"$ref": "AAAAAAGIug0MZ5ZMUA4="
-											},
-											"visible": false,
-											"font": "Arial;13;0",
-											"left": 371,
-											"top": 283,
-											"height": 13,
-											"alpha": 1.5707963267948966,
-											"distance": 25,
-											"hostEdge": {
-												"$ref": "AAAAAAGIug0MZ5ZNIb8="
-											},
-											"edgePosition": 1
-										},
-										{
-											"_type": "EdgeLabelView",
-											"_id": "AAAAAAGIug0MZ5ZQCYw=",
-											"_parent": {
-												"$ref": "AAAAAAGIug0MZ5ZNIb8="
-											},
-											"model": {
-												"$ref": "AAAAAAGIug0MZ5ZMUA4="
-											},
-											"visible": false,
-											"font": "Arial;13;0",
-											"left": 337,
-											"top": 284,
-											"height": 13,
-											"alpha": -1.5707963267948966,
-											"distance": 10,
-											"hostEdge": {
-												"$ref": "AAAAAAGIug0MZ5ZNIb8="
-											},
-											"edgePosition": 1
-										},
-										{
-											"_type": "UMLActivationView",
-											"_id": "AAAAAAGIug0MZ5ZRtMA=",
-											"_parent": {
-												"$ref": "AAAAAAGIug0MZ5ZNIb8="
-											},
-											"model": {
-												"$ref": "AAAAAAGIug0MZ5ZMUA4="
-											},
-											"font": "Arial;13;0",
-											"left": 310,
-											"top": 300,
-											"width": 14,
-											"height": 29
-										}
-									],
-									"font": "Arial;13;0",
-									"head": {
-										"$ref": "AAAAAAGIuS4mo79ZLEw="
-									},
-									"tail": {
-										"$ref": "AAAAAAGIuS4mo79ZLEw="
-									},
-									"points": "317:280;347:280;347:300;323:300",
-									"nameLabel": {
-										"$ref": "AAAAAAGIug0MZ5ZOJ4I="
-									},
-									"stereotypeLabel": {
-										"$ref": "AAAAAAGIug0MZ5ZP0qg="
-									},
-									"propertyLabel": {
-										"$ref": "AAAAAAGIug0MZ5ZQCYw="
-									},
-									"activation": {
-										"$ref": "AAAAAAGIug0MZ5ZRtMA="
-									}
+									"text": "(8) Scénario d'erreur : L'article n'existe pas\n8.1 Le SI informe le modérateur que l'article n'existe plus.\nLe scénario s'arrête à ce point"
 								},
 								{
 									"_type": "UMLSeqMessageView",
@@ -684,7 +573,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 449,
-											"top": 336,
+											"top": 312,
 											"width": 145.2216796875,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -693,7 +582,7 @@
 												"$ref": "AAAAAAGIuTOKqb/VC4Q="
 											},
 											"edgePosition": 1,
-											"text": "4 : Cliquer sur modifier"
+											"text": "3 : Cliquer sur modifier"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -707,7 +596,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 521,
-											"top": 321,
+											"top": 297,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 25,
@@ -728,7 +617,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 521,
-											"top": 356,
+											"top": 332,
 											"height": 13,
 											"alpha": -1.5707963267948966,
 											"distance": 10,
@@ -748,7 +637,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 725,
-											"top": 352,
+											"top": 328,
 											"width": 14,
 											"height": 129
 										}
@@ -760,7 +649,7 @@
 									"tail": {
 										"$ref": "AAAAAAGIuS4mo79ZLEw="
 									},
-									"points": "317:352;725:352",
+									"points": "317:328;725:328",
 									"nameLabel": {
 										"$ref": "AAAAAAGIuTOKqb/WDfo="
 									},
@@ -804,7 +693,7 @@
 												"$ref": "AAAAAAGIug2rf5ZptW4="
 											},
 											"edgePosition": 1,
-											"text": "5 : Vérifier modifications"
+											"text": "4 : Vérifier modifications"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -906,7 +795,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 423,
-											"top": 476,
+											"top": 452,
 											"width": 195.583984375,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -915,7 +804,7 @@
 												"$ref": "AAAAAAGIuTch+MA42Os="
 											},
 											"edgePosition": 1,
-											"text": "6 : Demander confirmation"
+											"text": "5 : Demander confirmation"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -929,7 +818,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 520,
-											"top": 491,
+											"top": 467,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 25,
@@ -950,7 +839,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 521,
-											"top": 456,
+											"top": 432,
 											"height": 13,
 											"alpha": -1.5707963267948966,
 											"distance": 10,
@@ -971,7 +860,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 317,
-											"top": 472,
+											"top": 448,
 											"width": 14,
 											"height": 25
 										}
@@ -983,7 +872,7 @@
 									"tail": {
 										"$ref": "AAAAAAGIuS6gwb97RIs="
 									},
-									"points": "725:472;317:472",
+									"points": "725:448;317:448",
 									"nameLabel": {
 										"$ref": "AAAAAAGIuTch+MA557I="
 									},
@@ -1027,7 +916,7 @@
 												"$ref": "AAAAAAGIug7wj5anNRk="
 											},
 											"edgePosition": 1,
-											"text": "7 : Confirmer modification"
+											"text": "6 : Confirmer modification"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1138,7 +1027,7 @@
 												"$ref": "AAAAAAGIug9Vx5bBO4s="
 											},
 											"edgePosition": 1,
-											"text": "8 : Vérifier confirmation"
+											"text": "7 : Vérifier confirmation"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1249,7 +1138,7 @@
 												"$ref": "AAAAAAGIug/Zx5befaA="
 											},
 											"edgePosition": 1,
-											"text": "9 : Vérifier article existant"
+											"text": "8 : Vérifier article existant"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1360,7 +1249,7 @@
 												"$ref": "AAAAAAGIuhCvvpb2JGk="
 											},
 											"edgePosition": 1,
-											"text": "10 : Modifier message"
+											"text": "9 : Modifier message"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1463,7 +1352,7 @@
 											"font": "Arial;13;0",
 											"left": 414,
 											"top": 836,
-											"width": 212.189453125,
+											"width": 213.154296875,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 10,
@@ -1471,7 +1360,7 @@
 												"$ref": "AAAAAAGIuhDeTpcNbmM="
 											},
 											"edgePosition": 1,
-											"text": "11 : Envoyer message article modifié"
+											"text": "10 : Envoyer message article modifié"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1552,6 +1441,19 @@
 									"activation": {
 										"$ref": "AAAAAAGIuhDeTpcRbyY="
 									}
+								},
+								{
+									"_type": "UMLNoteView",
+									"_id": "AAAAAAGIuhJwn5czq8U=",
+									"_parent": {
+										"$ref": "AAAAAAGIuSxtlL9DcAs="
+									},
+									"font": "Arial;13;0",
+									"left": 72,
+									"top": 1080,
+									"width": 432,
+									"height": 73,
+									"text": "(7) Scénario alternatif : confirmation négative\n7.1 Le si informe le modérateur qu'il n'a pas confirmé la modification\n7.2 Proposition de retour au point 6 ou 2 "
 								}
 							]
 						}
@@ -1585,20 +1487,6 @@
 								"$ref": "AAAAAAGIuS4mo79SaeU="
 							},
 							"messageSort": "reply"
-						},
-						{
-							"_type": "UMLMessage",
-							"_id": "AAAAAAGIug0MZ5ZMUA4=",
-							"_parent": {
-								"$ref": "AAAAAAGIuSxtlL9CnhE="
-							},
-							"name": "Saisir informations de modificatiion",
-							"source": {
-								"$ref": "AAAAAAGIuS4mo79SaeU="
-							},
-							"target": {
-								"$ref": "AAAAAAGIuS4mo79SaeU="
-							}
 						},
 						{
 							"_type": "UMLMessage",
