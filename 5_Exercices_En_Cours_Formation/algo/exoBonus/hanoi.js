@@ -73,16 +73,9 @@ function hanoi(n,start,end,middle){
       eigam(uno,tres,dos);
     }
     deuxSept++;   
-
   
   }
-  //   tres.unshift(uno.shift());  // Déplacer de un vers trois   
-  // for (let i = 0; i < 3; i++) {
-  //   if(i==0)magie(uno,tres,dos);
-  //   if(i==1)eigam(uno,tres,dos);
-  // }
-      
-
+  
 
   console.log(uno,dos,tres);
 

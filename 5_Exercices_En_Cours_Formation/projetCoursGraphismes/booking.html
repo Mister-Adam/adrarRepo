@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+</head>
+<body>
+    
+    <header></header>
+
+    <h1>Réserver le Château Ange</h1>
+    
+    
+    <form action="">
+
+        <fieldset>
+
+            <div>
+                <label for="surname">Prénom: </label>
+                <input type="text" name="surname"  placeholder="Ex: Jacques" minlength="3" maxlength="20" required>
+
+                <label for="name">Nom: </label>
+                <input type="text" minlength="2" maxlength="20" placeholder="Ex: Dubois" required>
+            </div>
+
+
+            <div>
+                <label for="radio">Nombres d'invités: </label>               
+            </div>
+            <div> 
+                <input type="radio" name="radAnswer" checked>5-10 Personnes
+            </div>
+            <div>
+                <input type="radio" name="radAnswer">10-15 Personnes
+            </div>
+            <div>
+                <input type="radio" name="radAnswer" >15-20 Personnes
+            </div>
+            <div>
+                <label for="phone">Numéro: </label>
+                <input type="text" placeholder="Ex: 00.11.22.33.44" required>
+            </div>
+            <div>
+                <label for="mail">E-mail: </label>
+                <input  type="text" placeholder="Ex: monMail@FAI.com" required>
+            </div>
+            
+            <div>
+                <label for="date"> Choisissez la date de votre venue</label>
+                <input type="date" id="date" required>
+
+            <!-- How to check if date ok -->
+            </div>
+
+            <div>
+                <label for="request">Requêtes spécifiques: </label>
+                <input type="text" name="request"  placeholder="Ex: Pas de ..." minlength="3" maxlength="20">
+                <!-- More space ? -->
+            </div>
+    
+            <div>
+                <input type="button" value="Envoyer">
+                <input type="button" value="Reset">
+            </div>
+
+        </fieldset>
+
+
+
+    </form>
+
+
+    <footer></footer>
+
+
+</body>
+</html>
