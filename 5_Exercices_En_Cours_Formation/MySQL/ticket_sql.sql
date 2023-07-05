@@ -120,7 +120,16 @@ and id_product = (select id_product from product where name_product ="tomate");
 Update toadd
 SET qtx_add = 5
 WHERE id_receipt = 15 
-and id_product = (select id_product from product where name_product ="tomate");
+and id_product = (select id_product from product where name_product ="lessive");
 
 
+select id_category, name_category from category 
+where left(name_category,1) > "a";
 
+select id_product, name_product, price_product from product 
+where price_product < 20;
+
+select id_receipt, date_receipt, id_seller from receipt 
+where date_receipt = "2023-02-03";
+
+select name_seller as nom, firstname_seller as prenom from seller;

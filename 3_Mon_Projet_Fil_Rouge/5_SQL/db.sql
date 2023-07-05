@@ -9,7 +9,7 @@ id_user int primary key not null auto_increment
 create table gamedata(
 id_mostkill int,
 id_nemesis int,
-id_user int not null unique
+id_user int not null
 );
 
 create table monster(
