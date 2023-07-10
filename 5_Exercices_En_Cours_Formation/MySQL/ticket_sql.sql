@@ -133,3 +133,5 @@ select id_receipt, date_receipt, id_seller from receipt
 where date_receipt = "2023-02-03";
 
 select name_seller as nom, firstname_seller as prenom from seller;
+
+
