@@ -1,0 +1,20 @@
+body > * {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#pkmn{
+    width: 300px;
+    height: 300px;
+
+}
+
+#pkmn > img{  
+    transform: scale(0.75);
+    pointer-events: none;
+}
+
+.hidden { filter: brightness(0); }
+    
