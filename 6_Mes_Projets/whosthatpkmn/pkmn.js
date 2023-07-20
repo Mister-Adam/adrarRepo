@@ -6,65 +6,80 @@ let clue = 0;
 let clues = [];
 let score = 0;
 let canClick = true;
+let alreadySeen = [];
+let maxPkmnId = 151; // Base is 1st generation
 
 let imgToGuess = document.getElementById("pkmn").getElementsByTagName('img')[0];
 const nameInput = document.getElementById("pkmnName");
 let scoreDisplay = document.getElementById("score");
 
-// WIP : add parameters to define the scope (generations, types etc)
-function newGuess(){
+// Upgrade possible: add parameters to define the scope (generations, types etc)
+newGuess();
+
+function newGuess() {
 
     // Reset clues and visual
     clue = 0;
     clues = [];
-    imgToGuess.className = "hidden";
-    imgToGuess.hidden = true;
+    imgToGuess.className = "hidden";    
     nameInput.value = "";
     nameInput.placeholder = "C'est ....";
-    
-    fetchPkmn(randomIntFromInterval(1, 151));
-}
 
-newGuess();
+    // Search for an id that hasn't been seen
+    let newId = randomIntFromInterval(1, maxPkmnId);
+    if (!alreadySeen.includes(newId)) {
+        alreadySeen.push(newId);
+    } else {
+        while (alreadySeen.includes(newId)) {
+            if (alreadySeen.length >= maxPkmnId){
+                return;
+            }            
+            newId = randomIntFromInterval(1, maxPkmnId);
+            if (!alreadySeen.includes(newId)) {
+                alreadySeen.push(newId);
+                break;
+            }
+        }
+    }
+
+    fetchPkmn(newId);
+    
+
+    imgToGuess.hidden = false; // Dislay image
+    canClick = true; // Authorize player to submit
+
+}
 
 
 // Search api for the sprite and name
 async function fetchPkmn(index) {
 
-    // let imgToGuess = document.getElementById("pkmn").getElementsByTagName('img')[0];
     try {
-        
-        await fetch(imgApiPath + `${index}`)
+        await
+        fetch(nameApiPath + `${index}`)
+            .then(response => response.json())
+            .then(data => {
+
+                answer = data.names[4].name.toLowerCase(); //.normalize("NFD").replace(/\p{Diacritic}/gu, "") to remove accents
+
+                // Small fix for these very special cases
+                if (data.names[4].name == "Nidoran♀" || data.names[4].name == "Nidoran♂") {
+                    answer = "nidoran";
+                }
+                // alreadySeen.push(answer);
+            })
+
+        await
+        fetch(imgApiPath + `${index}`)
             .then(response => response.json())
             .then(data => {
                 imgToGuess.src = data.sprites.other.home.front_default;
             })
-
-        await fetch(nameApiPath + `${index}`)
-            .then(response => response.json())
-            .then(data => {
-
-                answer = data.names[4].name.toLowerCase() ;
-
-                // Small fix for these very special cases
-                if(data.names[4].name == "Nidoran♀" || data.names[4].name == "Nidoran♂"){
-                    answer = "nidoran";
-                }
-            })
-
-
+        
     } catch (error) {
         imgToGuess.src = "./img/MissingNo.png";
-        answer = "MissingNo";
-    } finally {
-        imgToGuess.hidden = false;
-    
-        canClick = true; // Authorize player to submit
+        answer = "MissingN0";
     }
-
-
-
-
 }
 
 function randomIntFromInterval(min, max) { // min and max included 
@@ -83,40 +98,40 @@ nameInput.addEventListener("keypress", function (event) {
 });
 
 //Show image and name 
-function show(showName = false) {   
+function show(showName = false) {
 
-    if (showName) nameInput.value = answer;
-    imgToGuess.className = "";
+    if (showName) nameInput.value = answer;  
+    imgToGuess.className = "";  
     updateScore(showName);
-
-
-    //New guess after some time
-    setTimeout(() => {
-        newGuess();
-    }, 2000);
     
+    //New guess after some time
+    setTimeout(() => {  
+        imgToGuess.hidden = true;  
+        newGuess();
+    }, 500);
+
 }
 
 // Add points if found else none
-function updateScore(failed){
-    score += failed? 0 : answer.length * 10 - clues.length*10;
-    scoreDisplay.textContent = score.toString();
+function updateScore(failed) {
+    score += failed ? 0 : answer.length * 10 - clues.length * 10;
+    scoreDisplay.textContent = score.toString() + " pour "+ alreadySeen.length + " vus";
 }
 
 //Called when clicking button
-function submit() {    
+function submit() {
 
-    if(!canClick)return;
+    if (!canClick) return;
 
     if (nameInput.value == answer) {
         show();
-        canClick = false; 
+        canClick = false;
         return;
     } else {
 
         if (clues.length >= answer.length / 2) {
             show(true);
-            canClick = false; 
+            canClick = false;
             return;
         }
         nameInput.placeholder = clueText(answer, clue);

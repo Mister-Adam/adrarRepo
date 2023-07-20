@@ -18,3 +18,18 @@ body > * {
 
 .hidden { filter: brightness(0); }
     
+
+#pkmnName{
+    font-family : 'Calibri','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    /* font-weight: bolder; */
+
+}
+
+h1, #submit, .scoreDisplay{
+    font-family : myFirstFont;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Pokemon.ttf);
+ }
