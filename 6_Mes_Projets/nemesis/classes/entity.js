@@ -1,42 +1,69 @@
 class Entity {
 
-    constructor(entityName,sprite,health){
-        this.entityName = entityName;
-        this.health = health;
+    constructor(Name,sprite,stats,abilities){
+        this.Name = Name;
+        this.stats = stats;
         this.sprite = sprite;
+        this.abilities = abilities;
     }
     
 }
 
 
-export class Character extends Entity {
+export class Boss extends Entity {
 
-    constructor(characterName,sprite,health,baseDeck,isPlayer){
-        super(characterName,sprite,health);
-        this.baseDeck = baseDeck;
-        this.isPlayer = isPlayer;
+    constructor(Name,sprite,stats,summons,abilities){
+        super(Name,sprite,stats,abilities);
+        this.summons = summons;
     }
 
-    getCharacter(){
-        return {name:this.entityName, sprite : this.sprite, health :this.health, baseDeck:this.baseDeck, isPlayer :this.isPlayer }
+    getBoss(){
+        return {name:this.Name, sprite : this.sprite, stats :this.stats, summons:this.summons, abilities :this.abilities }
     }
-
 }
 
 
 export class Unit extends Entity {
 
-    constructor(unitName,sprite,health,atk,abilityList,cost){
-        super(unitName,sprite,health);
-        this.atk = atk;
-        this.abilityList = abilityList;
-        this.cost = cost;
+    constructor(Name,sprite,stats,abilities,isPlayer){
+        super(Name,sprite,stats,abilities);
+        this.isPlayer = isPlayer;
     }
 
     getUnit(){
-        return {name:this.entityName, sprite : this.sprite, health :this.health, atk : this.atk, abilityList : this.abilityList, cost: this.cost}
+        return {name:this.Name, sprite : this.sprite, stats :this.stats, abilities : this.abilities,isPlayer : this.isPlayer}
     }
 
 }
 
 
+export class Party{
+
+    constructor(members){
+        this.members = members;
+    }
+
+    getMembers(){
+        return {partyMembers :this.members}
+    }
+
+}
+
+
+export class Stats{
+
+    constructor(health,atk,def,speed){
+        this.health = health;
+        this.atk = atk;
+        this.def = def;
+        this.speed = speed;
+
+    }
+
+    getStats(){
+        return {health :this.health,atk :this.atk,def :this.def,speed :this.speed,}
+    }
+
+
+
+}

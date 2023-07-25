@@ -1,8 +1,9 @@
 class Ability{
-    constructor (abilityName,sprite,effect,cost){
-        this.abilityName = abilityName;
+    constructor (Name,sprite,effect,aoe){
+        this.Name = Name;
         this.sprite = sprite;
         this.effect = effect;
+        this.aoe = aoe;
     }
 
 }
@@ -10,27 +11,27 @@ class Ability{
 
 export class Power extends Ability{
 
-    constructor (powerName,sprite,effect,delay){
-        super(powerName,sprite,effect);
+    constructor (Name,sprite,effect,aoe,delay){
+        super(Name,sprite,aoe,effect);
         this.delay = delay;
         
     }
 
     getPower(){
-        return {name : this.abilityName, sprite:this.sprite,delay:this.delay,effect:this.effect };
+        return {name : this.Name, sprite:this.sprite,delay:this.delay,effect:this.effect, aoe:this.aoe };
     }
 
 }
 
 export class Spell extends Ability{
 
-    constructor (spellName,sprite,effect,cost){
-        super(spellName,sprite,effect);
-        this.cost = cost;        
+    constructor (Name,sprite,effect,aoe,cooldown){
+        super(Name,sprite,aoe,effect);
+        this.cooldown = cooldown;        
     }
 
     getSpell(){
-        return {name : this.abilityName, sprite:this.sprite,cost:this.cost,effect:this.effect };
+        return {name : this.Name, sprite:this.sprite,cooldown:this.cooldown,effect:this.effect, aoe: this.aoe };
     }
 
 }
