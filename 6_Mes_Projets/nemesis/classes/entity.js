@@ -5,6 +5,22 @@ class Entity {
         this.stats = stats;
         this.sprite = sprite;
         this.abilities = abilities;
+        this.turnOrder = 0;
+        this.position = "";
+    }
+
+    takeDamage(amount){  
+        let hp = this.stats.health ;
+        hp -= amount;
+
+        if(hp <= 0){
+            this.stats.health = 0;
+            console.log(this.Name + "is dead"); // call kill
+        }
+        else {
+            this.stats.health = hp;
+        }
+        return amount; // final amount to be displayed on log
     }
     
 }
@@ -18,8 +34,9 @@ export class Boss extends Entity {
     }
 
     getBoss(){
-        return {name:this.Name, sprite : this.sprite, stats :this.stats, summons:this.summons, abilities :this.abilities }
+        return {name:this.Name, position: this.position, isPlayer: false, turnOrder:this.turnOrder,sprite : this.sprite, stats :this.stats, summons:this.summons, abilities :this.abilities }
     }
+
 }
 
 
@@ -31,7 +48,7 @@ export class Unit extends Entity {
     }
 
     getUnit(){
-        return {name:this.Name, sprite : this.sprite, stats :this.stats, abilities : this.abilities,isPlayer : this.isPlayer}
+        return {name:this.Name, position: this.position, turnOrder:this.turnOrder,sprite : this.sprite, stats :this.stats, abilities : this.abilities,isPlayer : this.isPlayer}
     }
 
 }
@@ -64,6 +81,7 @@ export class Stats{
         return {health :this.health,atk :this.atk,def :this.def,speed :this.speed,}
     }
 
+    
 
 
 }

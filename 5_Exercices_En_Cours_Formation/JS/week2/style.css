@@ -1,0 +1,26 @@
+/* h3 {
+    display: none;
+} */
+
+#myForm {
+    background-color: rgb(59, 17, 17); 
+}
+
+.boxBar {
+    width: 100%;
+    border: 5px solid blueviolet;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.bar {
+    height: 21px;
+    background: turquoise;
+    width: 0%;
+}
+
+body {
+    min-height: 5000px;
+}
+
