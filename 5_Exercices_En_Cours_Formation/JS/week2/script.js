@@ -2,9 +2,20 @@
 let monTxt=document.querySelector("textarea");
 
 let rendu = document.getElementById("formRender");
+
+monTxt.value = localStorage.getItem("monSuperTexte");
+if(monTxt.value!= null){
+    rendu.innerHTML = localStorage.getItem("monSuperTexte");
+}
 monTxt.addEventListener("keydown", function() { 
+    localStorage .setItem("monSuperTexte",monTxt.value);
     rendu.innerHTML = monTxt.value;
 });
+
+
+// monTxt.addEventListener("keydown", function() { 
+//     rendu.innerHTML = monTxt.value;
+// });
 
 
 

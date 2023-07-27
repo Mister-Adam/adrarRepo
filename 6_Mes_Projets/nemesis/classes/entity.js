@@ -15,13 +15,14 @@ class Entity {
 
         if(hp <= 0){
             this.stats.health = 0;
-            console.log(this.Name + "is dead"); // call kill
+            return 0;
         }
         else {
             this.stats.health = hp;
         }
-        return amount; // final amount to be displayed on log
+        return this.stats.health; // final amount to be displayed on
     }
+
     
 }
 

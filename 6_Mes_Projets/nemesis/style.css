@@ -23,12 +23,16 @@
     height : 100px;
     background-color: rgb(212, 198, 198);
     align-items: center;
-    align-self: center;
+        text-align:center;
+
 }
 
 #abilities button{
     width: 50%;
-
+    height: 50%;
+    margin:0 auto;
+    display:block;
+    text-align:center;
 
 }
 
