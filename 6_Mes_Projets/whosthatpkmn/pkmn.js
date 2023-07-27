@@ -77,6 +77,7 @@ async function fetchPkmn(index) {
             })
         
     } catch (error) {
+        alert(error.name,error.message,error.stack);
         imgToGuess.src = "./img/MissingNo.png";
         answer = "MissingN0";
     }
