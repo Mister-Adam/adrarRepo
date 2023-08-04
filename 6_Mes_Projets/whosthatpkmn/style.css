@@ -22,14 +22,20 @@ body > * {
 #pkmnName{
     font-family : 'Calibri','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     /* font-weight: bolder; */
-
 }
 
-h1, #submit, .scoreDisplay{
+h1, #submit, .scoreDisplay, #gen, h3, #changeScope{
     font-family : myFirstFont;
 }
 
 @font-face {
     font-family: myFirstFont;
     src: url(Pokemon.ttf);
- }
+}
+
+#gen{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+}
+

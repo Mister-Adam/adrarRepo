@@ -7,14 +7,37 @@ let clues = [];
 let score = 0;
 let canClick = true;
 let alreadySeen = [];
-let maxPkmnId = 151; // Base is 1st generation
+let genScope = [1];// Base is 1st generation
+
+
+// WIP : Need to tune the exacts generations
+let pkmnMaps = { 1 : [1,151], 2:[152,301], 3:[302,451], 4:[452,601]}
 
 let imgToGuess = document.getElementById("pkmn").getElementsByTagName('img')[0];
 const nameInput = document.getElementById("pkmnName");
 let scoreDisplay = document.getElementById("score");
 
-// Upgrade possible: add parameters to define the scope (generations, types etc)
 newGuess();
+
+// Called by the checkboxes
+function checkboxChange(gen){
+
+    // check the bool state of the checkbox OR make table with gens
+    if(genScope.includes(gen) && genScope.length>1){
+        // remove
+        var index = genScope.indexOf(gen);
+            if (index !== -1) {
+                genScope.splice(index, 1);
+                }
+    } else if (!genScope.includes(gen) && genScope.length>=1) {
+        // add
+        genScope.push(gen);
+    }  else if (genScope.length == 1){
+        alert("Il faut au moins une génération!");
+        document.getElementById("gen"+gen).checked = true;// re-check the checkbox?
+
+    }    
+}
 
 function newGuess() {
 
@@ -25,8 +48,14 @@ function newGuess() {
     nameInput.value = "";
     nameInput.placeholder = "C'est ....";
 
+    // Take random nb in a random gen available
+    const randomElement = genScope[Math.floor(Math.random() * genScope.length)]; 
+    var key = pkmnMaps[randomElement];
+    let minPkmnId = key[0];
+    let maxPkmnId = key[1];
+
     // Search for an id that hasn't been seen
-    let newId = randomIntFromInterval(1, maxPkmnId);
+    let newId = randomIntFromInterval(minPkmnId, maxPkmnId);
     if (!alreadySeen.includes(newId)) {
         alreadySeen.push(newId);
     } else {
@@ -109,7 +138,7 @@ function show(showName = false) {
     setTimeout(() => {  
         imgToGuess.hidden = true;  
         newGuess();
-    }, 500);
+    }, 1000);
 
 }
 
