@@ -60,3 +60,4 @@ alter table commentaire
 add constraint fk_rattacher_chocoblast
 foreign key(id_chocoblast)
 references chocoblast(id_chocoblast);
+
