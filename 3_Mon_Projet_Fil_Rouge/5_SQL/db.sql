@@ -86,5 +86,7 @@ id_image int not null,
 primary key (id_article,id_image)
 );
 
+insert into ability (name_ability,description_ability)
+values("ember","deal 5 damage in small cone."), ("water gun","deal 5 damage in single cell.");
 -- user_data
 -- article_img
